@@ -1,0 +1,58 @@
+ion-item{
+    --padding-end: 16px;
+}
+
+ion-toolbar ion-title{
+    margin-top:10px;
+}
+
+ion-content ion-item ion-button{
+    margin: 20px auto;
+}
+
+ion-content ion-row ion-item.project-item{
+    border: 1px solid #cfcfcf;
+    border-radius: 5px;
+}
+
+ion-content ion-row ion-item.project-item ion-thumbnail ion-icon{
+    font-size: 30px;
+    margin-top:13px;
+}
+
+ion-content ion-row ion-item.project-item ion-label{
+    cursor: pointer;
+}
+
+ion-menu ion-content ion-list{
+    padding: 0;
+}
+
+ion-menu ion-item ion-thumbnail ion-icon{
+    font-size: 30px;
+    margin-top:10px;
+    color: #333;
+}
+
+ion-menu ion-item ion-button{
+    width: 100%;
+    height:100%;
+    font-size: 15px;
+}
+
+ion-menu ion-item ion-button ion-thumbnail{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    left: -20%;
+    top: 20%;
+}
+
+ion-menu ion-item ion-button ion-label{
+    width: 105%;
+    height: 100%;
+    position: relative;
+    left: -30%;
+    top: 40%;
+    text-align: left;
+}

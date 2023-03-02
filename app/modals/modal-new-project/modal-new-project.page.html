@@ -1,0 +1,26 @@
+<ion-header>
+	<ion-toolbar>
+		<ion-title class="ion-text-center">Novo Projeto</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+	<ion-item>
+		<ion-label position="floating">Nome do Projeto</ion-label>
+		<ion-input [(ngModel)]="projectName"></ion-input>
+	</ion-item>
+
+	<ion-row>
+
+		<ion-col size="6">
+			<ion-button color="success" (click)="saveProject()" class="ion-float-right">Salvar</ion-button>
+		</ion-col>
+
+		<ion-col size="6">
+			<ion-button color="danger" (click)="closeModal()">Cancelar</ion-button>
+		</ion-col>
+
+	</ion-row>
+
+</ion-content>

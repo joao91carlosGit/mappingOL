@@ -1,0 +1,16 @@
+<div id="map" class="map">
+
+    <!-- Download Basemap for Offline usage -->
+    <div class="bottom-basemap-button ol-unselectable ol-control" *ngIf="platform.is('cordova')">
+        <button title="Download basemap atual" (click)="downloadBasemap()">
+            <ion-icon name="download-outline"></ion-icon>
+        </button>
+    </div>
+
+    <div #container class="ol-popup" (click)="openEditFeature(feature)">
+        <div #content class="ol-content"></div>
+    </div>
+
+    <ion-icon name="scan-circle-outline" class="alvo"></ion-icon>
+
+</div>

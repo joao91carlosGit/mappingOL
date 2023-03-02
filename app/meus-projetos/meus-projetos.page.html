@@ -1,0 +1,97 @@
+<ion-header>
+	<ion-toolbar>
+
+		<ion-row>
+
+			<ion-col size="8">
+				<ion-title>Meus Projetos</ion-title>
+			</ion-col>
+
+			<ion-col size="4">
+				<ion-button size="small" color="primary" class="ion-float-right" (click)="openMenu()">
+					<ion-icon name="settings-outline"></ion-icon>
+				</ion-button>
+			</ion-col>
+
+		</ion-row>
+
+	</ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+	<!-- Button add project -->
+	<ion-item class=".ion-text-center">
+		<ion-button color="primary" (click)="modalNewProject()"> + Novo Projeto </ion-button>
+	</ion-item>
+
+	<!-- Projects -->
+	<ion-row>
+
+		<ion-col sizeSm="12" sizeMd="6" sizeLg="4" sizeXl="3" *ngFor="let project of projects">
+
+			<ion-item lines="none" class="project-item">
+
+				<ion-thumbnail slot="start" (click)="goToMap(project.id)">
+					<ion-icon name="map-outline"></ion-icon>
+				</ion-thumbnail>
+
+				<ion-label (click)="goToMap(project.id)">
+					<h2>{{project.project}}</h2>
+					<p>{{project.date}}</p>
+				</ion-label>
+
+				<ion-button slot="end" (click)="openOptions(project.id)">
+					<ion-icon name="options-outline"></ion-icon>
+				</ion-button>
+
+			</ion-item>
+
+		</ion-col>
+
+	</ion-row>
+
+	<!-- menu -->
+	<ion-menu side="start" menuId="optionMenu" contentId="main" type="overlay">
+		<ion-header>
+			<ion-toolbar color="light">
+				<ion-title>Menu</ion-title>
+			</ion-toolbar>
+		</ion-header>
+
+		<ion-content id="main" color="light">
+			<ion-list>
+				<ion-item color="light" *ngIf="offlineMap">
+					<ion-button fill="clear" (click)="deleteAllMaps()">
+						<ion-thumbnail slot="start">
+							<ion-icon name="remove-circle-outline"></ion-icon>
+						</ion-thumbnail>
+
+						<ion-label color="dark">Limpar Mapas</ion-label>
+					</ion-button>
+				</ion-item>
+
+				<ion-item color="light">
+					<ion-button fill="clear" (click)="warningNotImplemented()">
+						<ion-thumbnail slot="start">
+							<ion-icon name="log-out-outline"></ion-icon>
+						</ion-thumbnail>
+
+						<ion-label color="dark">Sair</ion-label>
+					</ion-button>
+				</ion-item>
+
+				<ion-item color="light">
+					<ion-button (click)="closeMenu()" fill="clear">
+						<ion-thumbnail slot="start">
+							<ion-icon name="close-outline"></ion-icon>
+						</ion-thumbnail>
+
+						<ion-label color="dark">Cancelar</ion-label>
+					</ion-button>
+				</ion-item>
+			</ion-list>
+		</ion-content>
+	</ion-menu>
+
+</ion-content>

@@ -1,0 +1,55 @@
+.min-max-width {
+    max-width: 200px;
+    margin: 0 auto;
+}
+
+.dark {
+    background: #333!important;
+}
+
+ion-list{
+    padding: 0;
+}
+
+ion-item{
+    --padding-end: 16px;
+}
+
+ion-footer ion-icon{
+    font-size: 200%;
+}
+
+.menu-header ion-list-header ion-label {
+    font-size: 150%;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    cursor: pointer;
+}
+
+.menu-header ion-list-header ion-icon {
+    position: relative;
+    top: 4px;
+}
+
+.menu-header ion-list-header ion-checkbox {
+    position: relative;
+    left: 1065%;
+    top: 20%;
+}
+
+.toolMenu ion-content ion-item ion-button {
+    --box-shadow: 0;
+}
+
+ion-menu ion-content ion-item ion-button.buttonExport {
+    width: 100%;
+    position: relative;
+    left: -3%;
+}
+
+ion-menu ion-content ion-item ion-button.buttonExport ion-label {
+    width: 100%;
+    text-align: left;
+    font-size: 103%;
+}

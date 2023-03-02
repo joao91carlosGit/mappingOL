@@ -1,0 +1,197 @@
+ion-content ion-item ion-button{
+    margin: 0 auto;
+    width: 90%;
+    height: 85%;
+}
+
+ion-content ion-item input[type="file"]{
+    display: none;
+}
+
+ion-content ion-item ion-row{
+    width: 100%;
+}
+
+ion-content ion-item ion-row ion-col .img{
+    height: 70px;
+}
+
+ion-content ion-item ion-row ion-col div.badge {
+    background: red;
+    width: 20%;
+    height: 25%;
+    text-align: center;
+    padding-top: 2%;
+    position: relative;
+    top: 16%;
+    left: 3%;
+    border-radius: 20px;
+}
+
+ion-content ion-item ion-input.color {
+    width: 80%;
+    position: relative;
+    text-align: center;
+    border-radius: 20px;
+    --padding-bottom: 0px;
+    --padding-top: 0px;
+    margin: 5% auto;
+}
+
+ion-content ion-row ion-col div.lastColors {
+    width: 20px;
+    height: 20px;
+    border-radius:100%;
+    margin: 10px auto;
+}
+
+ion-content ion-row ion-col div.lastColors.selected {
+    border: 1px solid #fff;
+}
+
+ion-content ion-row ion-col div.lastColors.selected::before {
+    position: absolute;
+    left: 38%;
+    top: 46%;
+    height: 13%;
+    width: 3px;
+    background-color: #fff;
+    content: "";
+    transform: translateX(10px) rotate(-45deg);
+    transform-origin: left bottom;
+}
+
+ion-content ion-row ion-col div.lastColors.selected::after {
+    position: absolute;
+    left: 39%;
+    bottom: 40%;
+    height: 3px;
+    width: 11%;
+    background-color: #fff;
+    content: "";
+    transform: translateX(10px) rotate(-45deg);
+    transform-origin: left bottom;
+}
+
+ion-content ion-item ion-select ion-select-option ion-label {
+    position: relative;
+}
+
+ion-content ion-radio-group ion-row ion-col ion-radio {
+    float: right;
+    position: relative;
+    top: 25%;
+}
+
+ion-content ion-radio-group ion-row ion-col ion-img.greenPushpin {
+    float: left;
+    width: 40px;
+}
+
+ion-content ion-radio-group ion-row ion-col div.point {
+    width:20px;
+    height:20px;
+    border-radius:100%;
+    background-color: #32ff32ff;
+    position: relative;
+    top: 23%;
+    border: 1px solid #e4e4e4;
+}
+
+ion-content div.properties ion-item.itemProperties.odd::part(native) {
+    background-color: #b5b5b5;
+}
+
+ion-content div.properties ion-item.itemProperties ion-input{
+    border: 1px solid #e4e4e4;
+    border-radius: 10px;
+    --padding-start: 5px;
+}
+
+ion-content div.properties ion-item.itemProperties ion-input:focus-within {
+    border-color: #a5de00;
+}
+
+ion-content div.properties ion-item-options ion-item-option {
+    z-index: 99;
+}
+
+/* Responsive **/
+@media (max-width: 768px) {
+
+    ion-content ion-row ion-col div.lastColors.selected::before {
+        left: 40%;
+    }
+    
+    ion-content ion-row ion-col div.lastColors.selected::after {
+        left: 41%;
+        width: 8%;
+    }
+
+}
+
+@media (max-width: 620px) {
+
+    ion-content ion-row ion-col div.lastColors.selected::before {
+        left: 39%;
+    }
+    
+    ion-content ion-row ion-col div.lastColors.selected::after {
+        left: 39%;
+        width: 9%;
+    }
+
+}
+
+@media (max-width: 526px) {
+
+    ion-content ion-row ion-col div.lastColors.selected::before {
+        left: 37%;
+        top: 47%;
+    }
+    
+    ion-content ion-row ion-col div.lastColors.selected::after {
+        left: 37%;
+        width: 11%;
+    }
+
+}
+
+@media (max-width: 431px) {
+
+    ion-content ion-row ion-col div.lastColors.selected::before {
+        left: 34%;
+    }
+    
+    ion-content ion-row ion-col div.lastColors.selected::after {
+        left: 35%;
+        width: 13%;
+    }
+
+}
+
+@media (max-width: 376px) {
+
+    ion-content ion-row ion-col div.lastColors.selected::before {
+        left: 32%;
+    }
+    
+    ion-content ion-row ion-col div.lastColors.selected::after {
+        left: 33%;
+        width: 16%;
+    }
+
+}
+
+@media (max-width: 321px) {
+
+    ion-content ion-row ion-col div.lastColors.selected::before {
+        left: 28%;
+    }
+    
+    ion-content ion-row ion-col div.lastColors.selected::after {
+        left: 30%;
+        width: 19%;
+    }
+
+}

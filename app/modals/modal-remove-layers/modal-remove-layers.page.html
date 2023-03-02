@@ -1,0 +1,31 @@
+<ion-header>
+	<ion-toolbar>
+		<ion-title slot="start">Remover Camadas</ion-title>
+		<ion-button slot="end" color="danger" (click)="closeModal()" class="ion-margin-end">Voltar</ion-button>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+	<ion-item class="ion-text-center">
+		<ion-label>Escolha a camada pra remover</ion-label>
+	</ion-item>
+
+	<div *ngIf="this.platform.is('cordova'); else desktop">
+		<ion-item *ngFor="let layer of layers">
+			<ion-label slot="start">{{layer.name}}</ion-label>
+			<ion-button slot="end" color="danger" (click)="deleteLayerConfirm(layer.id)" class="ion-margin-end">
+				<ion-icon name="trash-outline"></ion-icon>
+			</ion-button>
+		</ion-item>
+	</div>
+	<ng-template #desktop>
+		<ion-item *ngFor="let layer of layersBrowser">
+			<ion-label slot="start">{{layer.name}}</ion-label>
+			<ion-button slot="end" color="danger" (click)="deleteLayerConfirm(layer.id)" class="ion-margin-end">
+				<ion-icon name="trash-outline"></ion-icon>
+			</ion-button>
+		</ion-item>
+	</ng-template>
+
+</ion-content>
